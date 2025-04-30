@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 
 # Alpha Vantage API Key
-API_KEY = "YOUR_ALPHA_VANTAGE_API_KEY"
+API_KEY = "S3FM58PIQMLD6MMC"
 
 # Company Tickers
 companies = {
