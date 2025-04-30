@@ -64,6 +64,8 @@ bash
 Copy
 Edit
 streamlit run app.py
+
+
 🧠 ML Models Used
 Linear Regression – Simple linear fit
 
