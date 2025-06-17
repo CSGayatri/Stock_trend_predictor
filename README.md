@@ -3,6 +3,7 @@
 A web-based application to analyze and predict stock prices using historical data and machine learning models in real time. Built with **Streamlit**, it fetches live stock data using the **Alpha Vantage API**, visualizes trends, and applies ML models to forecast future prices.
 
 👉 **Live Demo:** [https://stocktrendpredictor-uajqusepoqxnzfbjkdleav.streamlit.app/](https://stocktrendpredictor-uajqusepoqxnzfbjkdleav.streamlit.app/)
+
 🧠 **Tech Stack:** Python, Streamlit, Scikit-learn, Pandas, Alpha Vantage API, Matplotlib
 
 ---
