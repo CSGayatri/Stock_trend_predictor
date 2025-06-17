@@ -1,88 +1,65 @@
-📈 Real-Time Stock Price Tracker & Prediction
-This is a powerful and interactive web app built with Streamlit that allows users to:
+# 📈 Real-Time Stock Price Predictor
 
-Track real-time stock data using the Alpha Vantage API
+A web-based application to analyze and predict stock prices using historical data and machine learning models in real time. Built with **Streamlit**, it fetches live stock data using the **Alpha Vantage API**, visualizes trends, and applies ML models to forecast future prices.
 
-Visualize key technical indicators (SMA, EMA, RSI, Bollinger Bands, MACD, etc.)
+👉 **Live Demo:** [https://stocktrendpredictor-uajqusepoqxnzfbjkdleav.streamlit.app/](https://stocktrendpredictor-uajqusepoqxnzfbjkdleav.streamlit.app/)
+🧠 **Tech Stack:** Python, Streamlit, Scikit-learn, Pandas, Alpha Vantage API, Matplotlib
 
-Predict the next day's stock price using machine learning models like:
+---
 
-Linear Regression
+## 🚀 Features
 
-Random Forest
+- 🔍 Search and visualize real-time stock data
+- 📉 View historical trends using line charts
+- 🤖 Predict future stock prices using ML models:
+  - Linear Regression
+  - Random Forest Regressor
+  - Gradient Boosting Regressor
+  - Support Vector Regressor (SVR)
+- 📊 Evaluate model performance with RMSE
+- 📦 Download processed data as CSV
 
-Support Vector Machine (SVM)
+---
 
-Gradient Boosting
+## 🛠️ Tech Stack
 
-🚀 Features
-📊 Real-time stock data for top companies (Apple, Tesla, Microsoft, etc.)
+| Component         | Tech Used                   |
+|------------------|-----------------------------|
+| Frontend UI      | Streamlit                   |
+| Data Source      | Alpha Vantage API           |
+| ML Models        | Scikit-learn (sklearn)      |
+| Data Handling    | Pandas, NumPy               |
+| Visualization    | Matplotlib                  |
+| Deployment       | Streamlit Share / Render / Local |
 
-🧠 ML-based price prediction with error metrics (MSE)
+---
 
-📈 Interactive plots with buy/sell signal highlights
+---
 
-🔍 Multiple model selection for better insights
+## 📦 Installation
 
-🛠️ Technologies Used
-Streamlit – For building the UI
+### 1. Clone the Repository
 
-Alpha Vantage API – For fetching stock market data
+```bash
+git clone https://github.com/CSGayatri/real-time-stock-predictor.git
+cd real-time-stock-predictor
 
-Pandas / NumPy – Data manipulation
-
-Matplotlib – Data visualization
-
-Scikit-learn – Machine learning (regression models and preprocessing)
-
-📦 Installation
-Clone the repo
-
-bash
-Copy
-Edit
-git clone https://github.com/CSGayatri/stock-predictor-app.git
-cd stock-predictor-app
-Install dependencies
-
-bash
-Copy
-Edit
+2. Install Dependencies
+It's recommended to use a virtual environment:
 pip install -r requirements.txt
-Get an Alpha Vantage API key
 
-Sign up at Alpha Vantage and get your free API key.
+3. Add API Key
+Create a .env file in the root directory:
+ALPHA_VANTAGE_API_KEY=your_api_key_here
 
-Replace the placeholder in the code:
-
-python
-Copy
-Edit
-API_KEY = "YOUR_ALPHA_VANTAGE_API_KEY"
-▶️ Run the App
-bash
-Copy
-Edit
+4. Run the App
 streamlit run app.py
 
+🔐 Environment Variables
+If you're using environment variables, ensure .env contains:
+ALPHA_VANTAGE_API_KEY=your_key
 
-🧠 ML Models Used
-Linear Regression – Simple linear fit
-
-Random Forest Regressor – Ensemble method for robust predictions
-
-Support Vector Regression (SVR) – Kernel-based regression
-
-Gradient Boosting Regressor – High-performance boosting model
-
-Each model is evaluated using Mean Squared Error (MSE).
-
-
-📌 Notes
-Some features like MACD/RSI calculations require historical data, so results may vary based on the "compact" vs "full" data returned by Alpha Vantage.
-
-Be mindful of Alpha Vantage's API call limits (5 calls/min and 500/day for free tier).
-
-📄 License
-MIT License. Feel free to use, modify, and contribute!
-
+And load it in your code using:
+from dotenv import load_dotenv
+load_dotenv()
+api_key = os.getenv("ALPHA_VANTAGE_API_KEY")
